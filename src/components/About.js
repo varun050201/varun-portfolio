@@ -7,7 +7,6 @@ const About = () => {
 
   return (
     <div className={`about-page ${darkMode ? 'dark' : 'light'}`}>
-      <Navbar darkMode={darkMode} />
       <div className="about-container">
         <div className="about-image">
           <img src="myphoto.jpg" alt="Your Name" />
