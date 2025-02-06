@@ -12,10 +12,6 @@ const Resume = () => {
 
   return (
     <div className={`resume-page ${darkMode ? 'dark' : 'light'}`}>
-      <Navbar darkMode={darkMode} />
-      <button className="toggle-mode" onClick={toggleDarkMode}>
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
       <div className="resume-container">
         <div className="resume-content">
           <h1>KORLAPATI VARUN</h1>
