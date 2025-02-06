@@ -5,7 +5,6 @@ import './Experience.css';
 const Experience = () => {
   return (
     <div className="experience-page">
-      <Navbar />
       <div className="experience-container">
         <div className="experience-item">
           <h2>CVS Health</h2>
