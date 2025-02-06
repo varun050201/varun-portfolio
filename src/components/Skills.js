@@ -44,10 +44,6 @@ const Skills = () => {
 
   return (
     <div className={`skills-page ${darkMode ? 'dark' : 'light'}`}>
-      <Navbar darkMode={darkMode} />
-      <button className="toggle-mode" onClick={toggleDarkMode}>
-        {darkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
       <div className="skills-container">
         <h1>Skills</h1>
         <div className="skills-grid">
