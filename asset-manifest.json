@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/varun-portfolio/static/css/main.49b5d65b.css",
+    "main.js": "/varun-portfolio/static/js/main.d3b7d5a5.js",
+    "index.html": "/varun-portfolio/index.html",
+    "main.49b5d65b.css.map": "/varun-portfolio/static/css/main.49b5d65b.css.map",
+    "main.d3b7d5a5.js.map": "/varun-portfolio/static/js/main.d3b7d5a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49b5d65b.css",
+    "static/js/main.d3b7d5a5.js"
+  ]
+}
