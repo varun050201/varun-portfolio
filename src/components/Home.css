@@ -1,0 +1,247 @@
+/* 🌟 Global Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #080808;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* 🎨 Animated Gradient Background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b, #1e1e2e, #312e81);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  position: relative;
+  transition: background 0.4s ease-in-out;
+}
+
+/* 🌌 Light Mode Background */
+.home-container.light {
+  background: linear-gradient(-45deg, #ffffff, #dfe9f3, #f5f7fa, #e6e6e6);
+}
+
+/* ✨ Floating Particles */
+.particle {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: moveUpDown 5s infinite ease-in-out;
+  opacity: 0.8;
+}
+.particle:nth-child(1) { top: 10%; left: 15%; animation-duration: 6s; }
+.particle:nth-child(2) { top: 40%; left: 60%; animation-duration: 7s; }
+.particle:nth-child(3) { top: 70%; left: 30%; animation-duration: 8s; }
+.particle:nth-child(4) { top: 90%; left: 80%; animation-duration: 9s; }
+
+/* 💎 Glassmorphic Info Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* 🎤 Interactive Text Effects */
+.animated-title {
+    font-size: 3em;
+    margin: 0;
+    text-decoration-color: #dfe9f3;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite, glowEffect 2s infinite alternate, fadeIn 1s ease-out forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+  }
+
+@keyframes glowEffect {
+  from { text-shadow: 0px 0px 20px rgba(255, 138, 0, 0.5); }
+  to { text-shadow: 0px 0px 30px rgba(255, 138, 0, 1); }
+}
+
+.animated-subtitle {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1.5s ease-out forwards, subtitleHover 2s infinite alternate;
+}
+
+/* 🌙 Theme Toggle Button */
+.toggle-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border: none;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff8a00, #e52e71);
+  color: white;
+}
+
+.home-container.light .toggle-mode {
+  background: linear-gradient(135deg, #007bff, #32c3ff);
+  color: black;
+}
+
+/* 🎯 Hover Effects */
+.toggle-mode:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #141414 0%, #000000 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  overflow: hidden;
+  transition: background 0.1s ease-out;
+}
+
+.home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-page:hover::before {
+  opacity: 0.3;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+.arrow-link {
+  margin-top: 20px;
+  font-size: 2em;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.arrow-link .arrow {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.arrow-link:hover .arrow {
+  transform: translateX(10px);
+}
+
+.space-shuttle {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 200px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/e5/STS120LaunchHiRes-edit1.jpg') no-repeat center center;
+  background-size: contain;
+  transition: bottom 3s ease-in-out;
+}
+
+.launch-animation .space-shuttle {
+  bottom: 100%;
+}
+
+@keyframes launch {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
+
+.launch-animation .space-shuttle {
+  animation: launch 3s ease-in-out forwards;
+}
+
+@keyframes moveUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Star Field Effect */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.3;
+  animation: twinkling 200s linear infinite;
+}
+
+@keyframes twinkling {
+  0% { background-position: 0 0; }
+  100% { background-position: -10000px 5000px; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+@keyframes subtitleHover {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}

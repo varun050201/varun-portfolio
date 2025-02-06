@@ -1,0 +1,132 @@
+.resume-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-page.light {
+  background-color: #f4f4f4;
+  color: #121212;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px; /* Ensure there's space between the Navbar and the resume content */
+  overflow: auto; /* Allow scrolling if content exceeds container height */
+}
+
+.resume-content {
+  width: 210mm; /* A4 width */
+  min-height: 297mm; /* A4 height */
+  background: white;
+  color: black;
+  padding: 20mm;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  transition: background 0.3s, color 0.3s;
+}
+
+.resume-content.light {
+  background: white;
+  color: black;
+}
+
+.resume-content.dark {
+  background: #121212;
+  color: white;
+}
+
+.resume-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.resume-content h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.resume-content h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.resume-content p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 10px;
+}
+
+.toggle-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.resume-page.light .toggle-mode {
+  background: rgba(0, 0, 0, 0.1);
+  color: #121212;
+}
+
+.toggle-mode:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.resume-page.light .toggle-mode:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar styles for light and dark mode */
+.navbar {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar.light {
+  background-color: #f4f4f4;
+  color: #121212;
+}
+
+.navbar a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}

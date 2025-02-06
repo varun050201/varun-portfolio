@@ -1,0 +1,14 @@
+.projects-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.projects-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.projects-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
