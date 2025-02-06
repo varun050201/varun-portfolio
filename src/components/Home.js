@@ -37,7 +37,6 @@ const Home = () => {
 
   return (
     <div id="home-page" className="home-page">
-      <Navbar />
       <div className="home-content">
         <div className="glass-card">
           <h1 className="animated-title">Varun Korlpati</h1>
